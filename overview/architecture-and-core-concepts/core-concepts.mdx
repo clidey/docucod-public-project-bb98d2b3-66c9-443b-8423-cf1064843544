@@ -1,0 +1,75 @@
+---
+title: "Core Concepts & Terminology"
+description: "Short definitions and explanations of domain-specific ideas, objects, and patterns users will frequently encounter. Reduces confusion and speeds up onboarding for new users."
+---
+
+## Understanding Core Concepts & Terminology
+
+Getting familiar with the foundational terms and ideas is the quickest way to start working confidently with this product. This page breaks down essential domain-specific concepts and objects that you'll encounter regularly—helping you avoid confusion and make onboarding smoother.
+
+### What Are Core Concepts?
+
+Core concepts are the building blocks that define how the product operates and how you interact with it. Think of them as the shared language between you and the system. Knowing these terms ensures we’re on the same page when discussing workflows, configurations, or troubleshooting.
+
+This isn't about deep technical detail but clear, straightforward explanations of practical ideas you’ll use every day.
+
+### Key Terms You’ll Encounter
+
+Here are some of the most important concepts and patterns you'll see, complete with concise definitions and context:
+
+- **Entity**: A distinct object or data item within the system, often representing a user, device, or other real-world item tracked by the product.
+- **Attribute**: A specific property or characteristic of an entity, like a user’s email or a device’s status.
+- **Relationship**: Defines how two entities are connected or interact, such as a user owning multiple devices.
+- **Event**: An action or occurrence recorded by the system, triggered by user activity or automated processes.
+- **Schema**: The blueprint describing how entities and attributes are structured and related.
+- **Pattern**: Reusable templates or conventions to organize data or workflows consistently.
+
+Each term forms part of the vocabulary that supports clear communication and precise operation within the product.
+
+### Why Knowing This Matters
+
+Understanding these core ideas helps you:
+
+- Quickly parse documentation, UI labels, and error messages
+- Confidently configure and extend the system without guesswork
+- Collaborate more effectively with team members and support
+- Avoid common pitfalls that come from misinterpretation
+
+Imagine you’re looking at a dashboard showing entities and events – knowing exactly what these represent avoids costly mistakes in analysis or configuration.
+
+### Putting Concepts Into Context
+
+For example, when you assign an **attribute** to an **entity**, you’re essentially defining a piece of information that will matter throughout the system, like a device’s firmware version or a user’s access level. These attributes may influence triggers for **events**, such as alerts or logs, which then connect back through **relationships** to provide a full picture at a glance.
+
+Here’s a quick example:
+
+```json
+{
+  "entity": "User",
+  "attributes": {
+    "email": "user@example.com",
+    "role": "admin"
+  },
+  "relationships": [
+    { "type": "owns", "entity": "Device", "id": "device123" }
+  ]
+}
+```
+
+This snippet shows a user entity with attributes and a relationship linking them to a device—capturing a real-world connection within the system.
+
+### Tips to Internalize Terminology
+
+- Refer back to this page when you encounter unfamiliar words.
+- Relate each concept to concrete examples in your own environment.
+- Use consistent language when documenting or reporting issues.
+- Combine this terminology with the [Core Architecture Overview](/overview/architecture-and-core-concepts/architecture-diagram) for a bigger picture.
+
+Remember, the clearer these concepts are, the easier it is to navigate the product’s interface and documentation.
+
+<Source url="https://github.com/modelorona/whodb" branch="main" paths={[{"path": "docs/terminology.md", "range": "1-60"}]} />
+
+---
+
+Explore next steps via our [System Architecture Overview](/overview/architecture-and-core-concepts/architecture-diagram) to see how these concepts come together in the bigger system or jump to the [Quick Feature Overview](/overview/features-overview/quick-feature-tour) to see them in action.
+
